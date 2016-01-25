@@ -53,7 +53,7 @@ class Product
 	
 	def add_to_products
 
-	duplicate_exists = false
+		duplicate_exists = false
 		
 		@@products.each do |product|
 			if product.title == @title
@@ -66,7 +66,6 @@ class Product
 		else
 			@@products << self
 		end
-
 
 	end
 	
