@@ -7,18 +7,34 @@ class Product
 	@@products = []
 	
 	def initialize(options={})
-	@title = options[:title]
-	@price = options[:price]
-	@stock = options[:stock]
+		@title = options[:title]
+		@price = options[:price]
+		@stock = options[:stock]
 	
-	add_to_products
+		add_to_products
 	end
 	
 	def self.all
 		@@products
 	end
 
+	def self.find_by_title(title)
+		@@products.each do |product|
+			if product.title == title
+				return product
+			end		
+		end		
+	end
 
+	def in_stock?
+		if self.stock > 0
+			return true
+		else
+			return false
+		end
+	end
+	
+	
 	private
 	
 	def add_to_products
