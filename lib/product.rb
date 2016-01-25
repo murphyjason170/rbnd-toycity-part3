@@ -34,6 +34,20 @@ class Product
 		end
 	end
 	
+	def self.in_stock
+	
+		in_stock_array = []
+		
+		@@products.each do |product|
+				if product.stock > 0
+					in_stock_array << product
+				end		
+		end			
+			
+		return in_stock_array
+	
+	end
+	
 	
 	private
 	
