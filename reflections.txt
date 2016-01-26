@@ -1,0 +1,14 @@
+reflections.txt
+
+How long did you spend working on this project?
+I spent all of Monday 1/25/2016 working on this project
+
+What was the most rewarding challenge you conquered?
+The most rewarding challenge was working with various object types at the same time (i.e. in the Transactions)
+
+What two additional features did you build? Why?
+The two additional features I added was date of purchase (to the Transaction class) and customer email address (to the Customer class). 
+I added these two features since these hold vital information in a real-world purchase.
+
+Where do you still have room to grow?
+I need to keep working with OOP concepts and programming. 
