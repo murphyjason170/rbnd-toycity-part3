@@ -2,7 +2,7 @@
 class Product
 	attr_reader :title
 	attr_reader :price
-	attr_reader :stock
+	attr_accessor :stock
 	
 	@@products = []
 	
@@ -26,6 +26,7 @@ class Product
 		end		
 	end
 
+	
 	def in_stock?
 		if self.stock > 0
 			return true
