@@ -61,3 +61,22 @@ puts transaction2.product == nanoblock # Should return true
 
 # walter.purchase(firehouse)
 # Should return OutOfStockError: 'LEGO Firehouse Headquarter' is out of stock.
+
+# Feature 1: Customer Email Address stored in Customer object
+jason = Customer.new(name: "Jason Murphy", email_address: "jason@mail.com")
+puts jason.email_address
+
+# Feature 2: Date purchased in the Transaction object
+transaction_jason = Transaction.new(jason, nanoblock)
+puts transaction_jason.date_purchased
+
+
+
+
+
+
+
+
+
+
+
