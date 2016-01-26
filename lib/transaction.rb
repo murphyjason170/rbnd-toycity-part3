@@ -1,5 +1,9 @@
 class Transaction
 	attr_reader :id
+	attr_reader :customer
+	attr_reader :product
+	attr_reader :date_purchased
+	
 	@@id = 1
 	
 	@@transactions = []
@@ -23,7 +27,7 @@ class Transaction
 		end		
 
 	end
-	
+		
 	def product
 		return @product
 	end
@@ -36,7 +40,7 @@ class Transaction
 	
 	def attempt_to_complete_transaction
 		if @product.stock == 0
-		    raise OutOfStockError, "'#{product}' is out of stock"
+		    raise OutOfStockError, "'#{@product.title}' is out of stock"
 		else
 			@product.stock = @product.stock - 1
 		
@@ -44,6 +48,9 @@ class Transaction
 			@@id += 1
 		
 			@@transactions << self
+
+			@date_purchased = Time.now			
+			# puts "Customer: #{customer.name} bought #{product.title} on #{self.date_purchased}"
 		end	
 	end
 	

@@ -1,11 +1,12 @@
 class Customer
 	attr_reader :name
+	attr_reader :email_address
 	
 	@@customers = []
 
 	def initialize(options={})
 		@name = options[:name]
-	
+		@email_address = options[:email_address]
 		add_to_customers
 	end
 
@@ -23,6 +24,7 @@ class Customer
 
 	def purchase(product)
 		Transaction.new(self, product)
+		# return "#{self.name} purchased a #{product.title}"
 	end
 	
 	private
